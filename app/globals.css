@@ -124,7 +124,10 @@
     @apply scroll-smooth;
   }
   .page-progress {
-    @apply h-[2px] fixed top-0 left-0 right-0 z-50 bg-blue-500;
+    @apply h-[2px] fixed top-0 left-0 right-0 z-100 bg-blue-500;
+  }
+  .scrollBody{
+    @apply w-dvw fixed top-0 left-0 right-0 h-dvh;
   }
 }
 
@@ -152,6 +155,7 @@
     stroke-dashoffset: 822;
     animation: underlineAnimation 0.5s 1s ease-in-out forwards;
   }
+  
 }
 
 @keyframes underlineAnimation {

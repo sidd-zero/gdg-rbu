@@ -1,7 +1,7 @@
 "use client";
 
 import { MoonIcon, SunIcon } from "lucide-react";
-import { useState, useRef, useCallback, memo } from "react";
+import { useRef, useCallback, memo } from "react";
 import { flushSync } from "react-dom";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";

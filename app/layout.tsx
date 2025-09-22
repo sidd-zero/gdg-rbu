@@ -15,10 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased`}>
+      <body className={`antialiased relative`}>
         <ProgressBar className="page-progress">
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="w-dvw h-dvh max-w-[1600px] mx-auto border-x overflow-x-hidden">
+            <div className="w-dvw h-dvh max-w-[1600px] mx-auto border-x overflow-x-hidden relative">
               <Header />
               {children}
             </div>

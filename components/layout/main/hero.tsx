@@ -1,7 +1,5 @@
+'use client';
 import React, { memo } from "react";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { ProgressLink } from "@/components/ui/page-progress";
 
 interface HeroButton {
   text: string;
@@ -37,7 +35,6 @@ const GOOGLE_LETTERS: { char: string; color: string }[] = [
 const HeroComponent: React.FC<HeroProps> = ({
   subheading = DEFAULT_SUBHEADING,
   description = DEFAULT_DESCRIPTION,
-  button = DEFAULT_BUTTON,
   imageSrc = "/hero-img.png",
   imageAlt = "Hero illustration",
   className = "",
@@ -98,13 +95,14 @@ const HeroComponent: React.FC<HeroProps> = ({
           </p>
         </div>
 
-        <Button
-          asChild
-          size="lg"
-          className="mt-10 shadow-lg bg-blue-500 min-w-12 font-bold"
+      <div className="mt-8 flex justify-center">
+        <button 
+          className="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-blue-500  rounded shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-blue-300 active:scale-95 w-full max-w-[200px] cursor-pointer"
         >
-          <ProgressLink href={"/"}>JOIN US</ProgressLink>
-        </Button>
+          <span className="relative z-10">JOIN US</span>
+       
+        </button>
+      </div>
       </div>
     </section>
   );
